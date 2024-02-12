@@ -1,0 +1,60 @@
+.divdir {
+    background-color: #fff; /* Arka plan rengi */
+    border-radius: 10px; /* Kenar yuvarlaklığı */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* İçerikleri merkeze hizala */
+    padding: 20px;
+    max-width: 400px;
+    margin: 20px auto;
+    border: 2px solid #007BFF; /* Belirgin mavi çerçeve */
+}
+
+.person-avatar {
+    width: 80px; /* Avatar genişliği */
+    height: 80px; /* Avatar yüksekliği */
+    border-radius: 50%; /* Yuvarlak avatar */
+    margin-bottom: 15px; /* Altta boşluk */
+}
+
+.person-name {
+    color: #333; /* İsim rengi */
+    font-size: 20px; /* İsim font boyutu */
+    font-weight: 600; /* Kalın font */
+    margin-bottom: 15px; /* Liste başlığı ile arasındaki mesafe */
+}
+
+.person-list-entry {
+    text-align: center; /* Liste başlığını ve içeriğini merkeze hizala */
+}
+
+.list-type {
+    font-size: 16px; /* Liste başlığı font boyutu */
+    color: #666; /* Liste başlığı rengi */
+    margin-bottom: 10px; /* Liste ile arasındaki boşluk */
+}
+
+ul {
+    list-style: none; /* Liste işaretlerini kaldır */
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 5px; /* Liste öğeleri arasında boşluk */
+}
+
+.list-label, .list-value {
+    display: inline-block;
+    margin: 0 5px; /* Etiket ve değer arasındaki mesafe */
+}
+
+.list-label {
+    font-weight: bold; /* Etiket için kalın font */
+    color: #444; /* Etiket rengi */
+}
+
+.list-value {
+    color: #777; /* Değer rengi */
+}
