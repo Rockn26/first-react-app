@@ -30,6 +30,7 @@ const Person = (props) => {
   };
   return (
     <div className="divdir">
+    <div onClick={ props.onRemovePerson} className="person-remove-x">X</div>
       <img className="person-avatar" src={props.avatar} alt="avatar" />
       <h1 className="person-name">{props.name}</h1>
       {personListTypes.map((listType) => {

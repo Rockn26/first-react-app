@@ -1,28 +1,12 @@
 import Person from "./components/Person";
-import { useReducer, useState } from "react";
-import { initialPhoneBook } from "./data";
-
 import "./App.css";
-const phoneBookReducer = (state, action) => {
-  switch (action.type) {
-    case "add":
-     return [...state, action.payload]
-    case "remove":
-      const newState = [...state];
-       newState.splice(action.index, 1);
-        return newState;
- 
-  }
-};
+import usePhonebook from "./hooks/usePhonebook";
+
+
 
 function App() {
-  const [phoneBook, dispatchPhoneBook] = useReducer(
-    phoneBookReducer,
-    initialPhoneBook
-  );
-  const handleAddPerson = (person) => {
-    setPhoneBook((prev) => [person, ...prev]);
-  };
+  const { phoneBook, handleAddPerson, handleRemovePerson } = usePhonebook();
+
   return (
     <>
       <button
@@ -44,9 +28,10 @@ function App() {
       >
         Ekle
       </button>
-      {phoneBook.map((person) => {
+      {phoneBook.map((person, idx) => {
         return (
           <Person
+            onRemovePerson={()=> handleRemovePerson(idx)}
             key={person.name}
             avatar={person.avatar}
             name={person.name}
